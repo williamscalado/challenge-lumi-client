@@ -1,5 +1,5 @@
 "use client";
-import { FileText, FileUp, LineChart, Moon } from "lucide-react";
+import { FileText, FileUp, LineChart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import LinksMenu from "./components/links";
@@ -8,7 +8,6 @@ export interface IMenuContent {
   name: string;
   icon?: React.ReactNode;
 }
-
 const menuContentLinks: IMenuContent[] = [
   {
     link: "dashboard",
@@ -30,9 +29,6 @@ const menuContentLinks: IMenuContent[] = [
 export default function Menu() {
   return (
     <>
-      <div className="w-full flex justify-end cursor-pointer     text-white ">
-        <Moon size={18} />
-      </div>
       <div className="flex w-[100%] justify-center align-middle mt-4 ">
         <Image src={"/logo-lumi.png"} alt="Lumi" width={161} height={70} />
       </div>

@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webpack: (config, { isServer }) => {
-    
+    webpack: (config, { isServer }) => {   
     // If client-side, don't polyfill `fs`
     if (!isServer) {
       config.resolve.fallback = {
@@ -10,7 +9,7 @@ const nextConfig = {
     }
 
     return config;
-  },
+  }
 }
 
 module.exports = nextConfig

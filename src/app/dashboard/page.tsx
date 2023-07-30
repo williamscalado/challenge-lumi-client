@@ -1,3 +1,10 @@
+import HeaderPage from "@/components/header";
+
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <HeaderPage title="Dashboard" />
+      <div>Content</div>
+    </div>
+  );
 }

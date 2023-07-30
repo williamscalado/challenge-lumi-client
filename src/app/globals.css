@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --white: #FFF;
     --green-menu: #02231C;
-    --children: #F2F4F8;
+      --children: #454547;
     --green-050: #00FB86;
 }
 
@@ -17,7 +17,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --children: #454547;
+--children: #F2F4F8;
       --green-menu: #02231C;
   }
 }

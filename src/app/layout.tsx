@@ -1,16 +1,19 @@
 import Menu from "@/components/menu";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lumi | Energia",
   description: "**",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import "react-toastify/dist/ReactToastify.css";
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="h-full bg-[color:var(--green-menu)]">
@@ -18,8 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="h-screen w-[300px] p-4 bg-[color:var(--green-menu)]">
             <Menu />
           </div>
-          <div className="bg-white w-full rounded-l-3xl	bg-[color:var(--children)]">
+          <div className=" w-full rounded-l-3xl pl-5 pr-5	bg-[color:var(--children)]">
             {children}
+            <ToastContainer />
           </div>
         </div>
       </body>

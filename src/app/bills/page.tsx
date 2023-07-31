@@ -13,9 +13,7 @@ const getDataBill = async (filter?: any) => {
   const opt2 =
     filter?.clientNumber != undefined ? `${filter?.clientNumber}/` : "";
   const opt1 = filter?.year != undefined ? `${filter?.year}/` : "";
-  console.log(filter?.year);
 
-  console.log(`/bill/client/${opt1}${opt2}`);
   return await HttpAdapter.fetch({
     method: "GET",
     url: `/bill/client/${opt1}${opt2}`,
@@ -29,7 +27,7 @@ export default function Bill() {
   const loadDataAllBills = React.useCallback(async (filter?: IFiltersProps) => {
     try {
       setLoading(true);
-      console.log(filter);
+
       const result = await getDataBill(filter);
       setDataBill(result);
     } catch (error) {
@@ -41,7 +39,6 @@ export default function Bill() {
   }, []);
 
   const handleChangeFilter = (filter: any) => {
-    console.log(filter);
     loadDataAllBills(filter);
   };
 

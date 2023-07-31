@@ -1,9 +1,9 @@
 "use client";
 import { HttpAdapter } from "@/adapters/axios";
+import Loading from "@/components/Loading";
 import HeaderPage from "@/components/header";
 import ListFiles from "@/components/listFiles";
 import React from "react";
-import { ProgressBar } from "react-loader-spinner";
 import { toast } from "react-toastify";
 
 export default function Upload() {
@@ -110,15 +110,7 @@ export default function Upload() {
         <div className="relative">
           {loading && (
             <div className="absolute w-full h-full flex justify-center items-center z-50">
-              <ProgressBar
-                height="80"
-                width="80"
-                ariaLabel="progress-bar-loading"
-                wrapperStyle={{}}
-                wrapperClass="progress-bar-wrapper"
-                barColor="#DDD"
-                borderColor="#02231C"
-              />
+              <Loading />
             </div>
           )}
           <div className={`${loading && "blur-sm"}`}>
